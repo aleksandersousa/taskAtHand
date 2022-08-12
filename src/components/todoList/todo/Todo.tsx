@@ -37,9 +37,9 @@ const Todo: React.FC<TodoProps> = ({
     changeTodoVisibility(todo.id as string);
   };
 
-  return currentUser?.id === user?.user.id || todo.isVisible ? (
+  return currentUser?.id === user?.user?.id || todo.isVisible ? (
     <Container>
-      {currentUser?.id === user?.user.id && (
+      {currentUser?.id === user?.user?.id && (
         <Tooltip title={!todo.isComplete ? 'Concluir tarefa' : 'Retomar tarefa'}>
           <IconButton
             disableFocusRipple
@@ -57,7 +57,7 @@ const Todo: React.FC<TodoProps> = ({
           <Description>{todo.desc}</Description>
         </ContentWrapper>
       </Content>
-      {currentUser?.id === user?.user.id && (
+      {currentUser?.id === user?.user?.id && (
         <Actions className="actions-active" isBrowser={isBrowser}>
           {isVisible ? (
             <Tooltip title="Tornar tarefa privada">

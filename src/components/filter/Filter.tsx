@@ -49,10 +49,10 @@ const Filter: React.FC<FilterProps> = ({
           >
             <FormControlLabel value="new" control={<Radio />} label="Novas" />
             <FormControlLabel value="complete" control={<Radio />} label="Concluídas" />
-            {currentUser?.id === user?.user.id && (
+            {currentUser?.id === user?.user?.id && (
               <FormControlLabel value="show" control={<Radio />} label="Públicas" />
             )}
-            {currentUser?.id === user?.user.id && (
+            {currentUser?.id === user?.user?.id && (
               <FormControlLabel value="hide" control={<Radio />} label="Privadas" />
             )}
           </RadioGroup>
