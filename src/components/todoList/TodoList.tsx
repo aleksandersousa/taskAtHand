@@ -215,7 +215,7 @@ const TodoList: React.FC<TodoListProps> = ({ list }) => {
           />
         ))}
       </Wrapper>
-      {currentUser?.id === loggedUser?.user.id && (
+      {currentUser?.id === loggedUser?.user?.id && (
         <AddTask onClick={() => _setState('showNewTaskModal', true)} />
       )}
       <NewTaskModal
